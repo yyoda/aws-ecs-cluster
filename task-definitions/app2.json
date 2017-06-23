@@ -1,0 +1,19 @@
+[
+  {
+    "environment": [],
+    "name": "ubuntu",
+    "image": "ubuntu",
+    "cpu": 10,
+    "portMappings": [
+      {
+          "containerPort": 80,
+          "hostPort": 0
+      }
+    ],
+    "memory": 10,
+    "command": [
+      "/bin/sh", "-c", "hostname -s > /tmp/index.html ; cd /tmp/ ; python -m SimpleHTTPServer 80"
+    ],
+    "essential": true
+  }
+]
